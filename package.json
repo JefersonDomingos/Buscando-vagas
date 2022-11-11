@@ -1,0 +1,25 @@
+{
+  "name": "procurando-vagas",
+  "version": "1.0.0",
+  "description": "Este projeto é um sistema de criação de vagas de emprego, onde podemos criar vagas, procurar, excluir e editar as vagas já criadas. Ele também contem interação com banco de dados e o framework express.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "dev",
+    "jobs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "sequelize": "^6.25.5",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
