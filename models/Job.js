@@ -23,5 +23,5 @@ const Job = db.define("job", {
     }
 });
 
-//exportando para utilizar onde precisar
+//exportando para utilizar onde precisar e fazer inserção no banco de dados
 module.exports = Job;
