@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Buscando Vagas</a>
+            <a class="navbar-brand" href="index.html">Procurando Vagas</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,26 +38,31 @@
                 <form action="">
                     <div class="form-group">
                         <label for="title">Título da vaga:</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga" required>
                         <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e objetivo.</small>
                     </div>
                     <!--descrição da vaga-->
                     <div class="form-group">
                         <label for="description">Descrição da vaga:</label>
-                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Descreva as atividades do desenvolvedor..."></textarea>
+                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Descreva as atividades do desenvolvedor..." required></textarea>
                     </div>
-                    
+                    <!--empresa  contratante-->
                     <div class="form-group">
-                        <label for="title">Título da vaga:</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga">
-                        <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e objetivo.</small>
+                        <label for="company">Empresa contratante:</label>
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Digite o nome da empresa contratante" required>
                     </div>
-
+                    <!--contato-->
                     <div class="form-group">
-                        <label for="title">Título da vaga:</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga">
-                        <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e objetivo.</small>
+                        <label for="email">E-mail para contato:</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Digite o email para contato" required>
                     </div>
+                    <!--Salário-->
+                    <div class="form-group">
+                        <label for="salary">Salário oferecido:</label>
+                        <input type="text" class="form-control" id="salary" name="salary" placeholder="Digite salário" required>
+                    </div>
+                    <input type="hidden" name="new-job" value="1">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
         </div>
