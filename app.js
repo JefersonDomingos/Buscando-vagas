@@ -1,13 +1,24 @@
-const express = require("express");
-const app = express();
-const db = require("./db/conection");
-const bodyParser = require("body-parser");
+const express     = require("express");
+const {engine}    = require("express-handlebars");
+const path        = require("path");
+const app         = express();
+const db          = require("./db/conection");
+const bodyParser  = require("body-parser");
+const Job         = require("./models/Job");
 
 const port = 3000;
 
 app.listen(port,function(){
     console.log(`O express está rodando na porta ${port}`);
 });
+
+//handlebars
+app.set("views", path.join(__dirname, "views"));
+app.engine("handlebars", engine({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+
+//Pasta de arquivos estáticos
+app.use(express.static(path.join(__dirname, "public")));
 
 //body-parser
 app.use(bodyParser.urlencoded({extended: false}));
@@ -24,7 +35,15 @@ db
 
 //rotas
 app.get("/", function(req,resp){
-    resp.send("Está funcionando ok ok");
+
+    Job.findAll({order: [
+        ["createdAt", "DESC"]
+    ]})
+    .then(jobs => {
+        resp.render("index", {
+            jobs
+        });
+    });
 });
 
 //rotas do job

@@ -7,6 +7,11 @@ router.get("/teste", (req, resp)=>{
     resp.send("o teste deu certo");
 });
 
+//renderizando pagina add job
+router.get("/add", (req, resp)=>{
+    resp.render("add");
+});
+
 //adiconar job via post
 router.post("/add", (req, resp)=>{
     //criando as variáveis que recebem o valor do body-parser
