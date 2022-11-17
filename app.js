@@ -5,6 +5,8 @@ const app         = express();
 const db          = require("./db/conection");
 const bodyParser  = require("body-parser");
 const Job         = require("./models/Job");
+const Sequelize   = require("sequelize");
+const Op          = Sequelize.Op;
 
 const port = 3000;
 
@@ -35,15 +37,35 @@ db
 
 //rotas
 app.get("/", function(req,resp){
+    //conexão form index.handlebars
+    let search = req.query.job;
+    let query  = "%"+search+"%";
 
-    Job.findAll({order: [
-        ["createdAt", "DESC"]
-    ]})
-    .then(jobs => {
-        resp.render("index", {
-            jobs
-        });
-    });
+    if(!search) {
+        Job.findAll({order: [
+            ["createdAt", "DESC"]
+        ]})
+        .then(jobs => {
+            resp.render("index", {
+                jobs
+            });
+        })
+        .catch(error => console.log(error));
+    }
+    
+    else {
+        Job.findAll({
+            where: {title: {[Op.like]: query}},
+            order: [
+            ["createdAt", "DESC"]
+        ]})
+        .then(jobs => {
+            resp.render("index", {
+                jobs, search
+            });
+        }).catch(error => console.log(error));
+    }
+
 });
 
 //rotas do job
