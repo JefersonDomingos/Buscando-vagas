@@ -7,7 +7,16 @@ router.get("/teste", (req, resp)=>{
     resp.send("o teste deu certo");
 });
 
-//renderizando pagina add job
+//rota de detalhe das vagas
+router.get("/view/:id", (req,resp)=> Job.findOne({
+    where: {id: req.params.id}
+}).then(job => {
+    resp.render("view", {
+        job
+    });
+}).catch(error => console.log(error)));
+
+//form da rota de envio
 router.get("/add", (req, resp)=>{
     resp.render("add");
 });
@@ -24,7 +33,7 @@ Job.create({
     salary,
     company,
     email,
-    new_job
+    new_job:1,
 }).then(()=> resp.redirect("/"))
 .catch(error => console.log(error));
 });
