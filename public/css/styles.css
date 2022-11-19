@@ -256,9 +256,110 @@
     background-color: #FFF;
 }
 
-/*Layout responsivo*/
+@media (max-width: 1200px){
+    .new-job .new-job-label {
+        left: calc(100% - 200px);
+    }
+}
 
-@media screen and (max-width: 450px) {
+    /*Desktop pequeno*/
+@media (max-width: 992px){
+     /*index*/
+     #navbarNav {
+        text-align: center;
+    }
+
+    #top-container {
+        padding-top: 100px;
+    }
+
+    #main-subtitle {
+        font-size: 1.8rem;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    #jobs-container #job-list-title{
+        text-align: center;
+    }
+
+    .list-group-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .new-job .new-job-label {
+        display: none;
+    }
+
+    #search-form button{
+        width: 125%;
+    }
+
+    #search-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px){
+    /*index*/
+    #navbarNav {
+        text-align: center;
+    }
+
+    #top-container {
+        padding: 50px;
+        padding-top: 100px;
+    }
+
+    #main-subtitle {
+        font-size: 1.8rem;
+        padding-bottom: 50px;
+    }
+
+    #jobs-container #job-list-title{
+        text-align: center;
+    }
+
+    #search-form #job {
+        width: 100%;
+    }
+
+    #search-form button{
+        width: 100%;
+    }
+
+    #search-button {
+        margin-top: 1.5rem;
+    }
+
+    #jobs-container {
+        padding: 10px;
+    }
+
+    .list-group-item h2 {
+        font-size: 1.4rem;
+    }
+
+    .new-job .new-job-label {
+        display: none;
+    }
+
+    /*add*/
+    #form-enviar {
+        display: block;
+        margin: 30px auto 0 auto;
+    }
+
+}
+    
+
+/*Layout mobile*/
+
+@media (max-width: 576px){
     /*index.handlebars*/
     #navbarNav {
         text-align: center;
@@ -279,6 +380,10 @@
 
     #search-form {
         padding: 0;
+    }
+
+    #search-button {
+        margin-top: 0;
     }
 
     #jobs-container {
@@ -322,6 +427,11 @@
         width: 70%;
     }
 
+    #button-back {
+        font-size: 1.2rem;
+        padding: 2px 3px;
+    }
+
     /*add.handlebars*/
     .text-center {
         font-size: 2.3rem;
@@ -339,3 +449,7 @@
     }
 
 }
+
+
+
+
