@@ -23,11 +23,6 @@ https://user-images.githubusercontent.com/105239532/202879581-f0199f5f-b5b4-4940
 - javascript,
 - Bootstrap.
 
-## Imagens
-
-![]()
-
-
 ## Para rodar o projeto
 
 basta apenas abrir um navegador de sua preferência e acessar o link abaixo:
