@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Este projeto é um sistema de criação de vagas de emprego, onde podemos criar vagas, procurar, excluir e editar as vagas já criadas. Ele também contem interação com banco de dados e o framework express.",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "node app.js"
   },
   "keywords": [
     "dev",
