@@ -8,7 +8,7 @@ const Job         = require("./models/Job");
 const Sequelize   = require("sequelize");
 const Op          = Sequelize.Op;
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port,function(){
     console.log(`O express está rodando na porta ${port}`);
