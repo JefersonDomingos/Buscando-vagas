@@ -6,24 +6,12 @@
 ## Veja o video
 
 
-
 ## Tecnologias
 
 - Express</br>
 - Sequelize</br>
 - Sqlite
 - body-parser
-
-## Imagens
-
-![]()
-
-
-## Para rodar o projeto
-
-basta apenas abrir um navegador de sua preferência e acessar o link abaixo:
-
-## Link
 
 ## Autor
 Jeferson Domingos Martins
