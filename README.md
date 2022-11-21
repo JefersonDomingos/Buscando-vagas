@@ -23,6 +23,8 @@ https://user-images.githubusercontent.com/105239532/202879581-f0199f5f-b5b4-4940
 - javascript,
 - Bootstrap.
 
+##Deploy : https://buscando-vagas-dois.herokuapp.com/
+
 ## Autor
 Jeferson Domingos Martins
 
